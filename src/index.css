@@ -57,6 +57,7 @@
 
     --radius: 0.5rem
   }
+
   .dark {
 
     --background: 222.2 84% 4.9%;
@@ -109,10 +110,21 @@
   }
 }
 
+
+@layer utilities {
+  .gradient {
+    @apply bg-gradient-to-br from-gray-500 via-gray-200 to-white
+  }
+  .gradient-title {
+    @apply gradient text-transparent bg-clip-text
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
